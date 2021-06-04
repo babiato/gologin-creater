@@ -1,0 +1,341 @@
+[22:42:30 ERROR main]: 1
+[22:44:14 ERROR main]: 1
+[22:44:55 ERROR main]: 1
+[22:45:14 ERROR main]: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 39, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 52, in links_opener
+    url_field = self.driver.find_element_by_xpath("//textarea")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+
+[22:47:47 ERROR main]: 1
+[22:48:00 ERROR main]: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 39, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 47, in links_opener
+    self.driver.get("https://apsolyamov.ru/files/url_opener.html")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=90.0.4430.85)
+
+[22:54:06 ERROR main]: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 39, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 52, in links_opener
+    url_field = self.driver.find_element_by_xpath("//textarea")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+
+[22:54:25 ERROR main]: Message: invalid element state: Failed to execute 'open' on 'Window': Unable to open a window with invalid URL 'http://ubhttp:.//wrwwu.chr/ys'.
+
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 39, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 55, in links_opener
+    self.driver.execute_script("open_all()")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 634, in execute_script
+    return self.execute(command, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state: Failed to execute 'open' on 'Window': Unable to open a window with invalid URL 'http://ubhttp:.//wrwwu.chr/ys'.
+
+  (Session info: chrome=90.0.4430.85)
+
+[22:54:25 ERROR main]: Message: invalid element state: Failed to execute 'open' on 'Window': Unable to open a window with invalid URL 'http://ubhttp:.//wrwwu.chr/ys'.
+
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 39, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 55, in links_opener
+    self.driver.execute_script("open_all()")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 634, in execute_script
+    return self.execute(command, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state: Failed to execute 'open' on 'Window': Unable to open a window with invalid URL 'http://ubhttp:.//wrwwu.chr/ys'.
+
+  (Session info: chrome=90.0.4430.85)
+
+[22:54:35 ERROR main]: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 39, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 52, in links_opener
+    url_field = self.driver.find_element_by_xpath("//textarea")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+
+[22:54:39 ERROR main]: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 39, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 52, in links_opener
+    url_field = self.driver.find_element_by_xpath("//textarea")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+
+[22:54:51 ERROR main]: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 31, in create_account
+    profile_id = api.create(options)
+  File "/home/user/Projects/gologin_creater/api.py", line 394, in create
+    response = json.loads(
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[22:54:53 ERROR main]: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 31, in create_account
+    profile_id = api.create(options)
+  File "/home/user/Projects/gologin_creater/api.py", line 394, in create
+    response = json.loads(
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[22:54:54 ERROR main]: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 39, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 52, in links_opener
+    url_field = self.driver.find_element_by_xpath("//textarea")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+
+[22:54:55 ERROR main]: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 31, in create_account
+    profile_id = api.create(options)
+  File "/home/user/Projects/gologin_creater/api.py", line 394, in create
+    response = json.loads(
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[22:56:18 ERROR main]: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 40, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 52, in links_opener
+    url_field = self.driver.find_element_by_xpath("//textarea")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+
+[22:56:18 ERROR main]: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 40, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 52, in links_opener
+    url_field = self.driver.find_element_by_xpath("//textarea")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 394, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 976, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//textarea"}
+  (Session info: chrome=90.0.4430.85)
+
+[22:56:20 ERROR main]: Message: invalid element state: Failed to execute 'open' on 'Window': Unable to open a window with invalid URL 'http://ffclhutbt.pr:u//'.
+
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 40, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 55, in links_opener
+    self.driver.execute_script("open_all()")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 634, in execute_script
+    return self.execute(command, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state: Failed to execute 'open' on 'Window': Unable to open a window with invalid URL 'http://ffclhutbt.pr:u//'.
+
+  (Session info: chrome=90.0.4430.85)
+
+[22:56:20 ERROR main]: Message: invalid element state: Failed to execute 'open' on 'Window': Unable to open a window with invalid URL 'http://ffclhutbt.pr:u//'.
+
+  (Session info: chrome=90.0.4430.85)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 40, in create_account
+    crawler.links_opener(sites)
+  File "/home/user/Projects/gologin_creater/automation.py", line 55, in links_opener
+    self.driver.execute_script("open_all()")
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 634, in execute_script
+    return self.execute(command, {
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/user/.local/share/virtualenvs/gologin_creater-PgVEqeYM/lib/python3.9/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidElementStateException: Message: invalid element state: Failed to execute 'open' on 'Window': Unable to open a window with invalid URL 'http://ffclhutbt.pr:u//'.
+
+  (Session info: chrome=90.0.4430.85)
+
+[22:56:42 ERROR main]: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 31, in create_account
+    profile_id = api.create(options)
+  File "/home/user/Projects/gologin_creater/api.py", line 394, in create
+    response = json.loads(
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[22:56:46 ERROR main]: [Errno 2] No such file or directory: 'gologin_zeroprofile.zip'
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/api.py", line 193, in download_profile_zip
+    self.extract_profile_zip()
+  File "/home/user/Projects/gologin_creater/api.py", line 210, in extract_profile_zip
+    with zipfile.ZipFile(self.profile_zip_path, 'r') as zip_ref:
+  File "/usr/lib/python3.9/zipfile.py", line 1257, in __init__
+    self._RealGetContents()
+  File "/usr/lib/python3.9/zipfile.py", line 1324, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 38, in create_account
+    debugger_address = api.start()
+  File "/home/user/Projects/gologin_creater/api.py", line 82, in start
+    self.create_startup()
+  File "/home/user/Projects/gologin_creater/api.py", line 334, in create_startup
+    self.download_profile_zip()
+  File "/home/user/Projects/gologin_creater/api.py", line 195, in download_profile_zip
+    self.create_empty_profile()
+  File "/home/user/Projects/gologin_creater/api.py", line 207, in create_empty_profile
+    shutil.copy(empty_profile, self.profile_zip_path)
+  File "/usr/lib/python3.9/shutil.py", line 418, in copy
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "/usr/lib/python3.9/shutil.py", line 264, in copyfile
+    with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+FileNotFoundError: [Errno 2] No such file or directory: 'gologin_zeroprofile.zip'
+[22:56:48 ERROR main]: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 31, in create_account
+    profile_id = api.create(options)
+  File "/home/user/Projects/gologin_creater/api.py", line 394, in create
+    response = json.loads(
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[22:56:49 ERROR main]: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 31, in create_account
+    profile_id = api.create(options)
+  File "/home/user/Projects/gologin_creater/api.py", line 394, in create
+    response = json.loads(
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[22:56:50 ERROR main]: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/home/user/Projects/gologin_creater/main.py", line 31, in create_account
+    profile_id = api.create(options)
+  File "/home/user/Projects/gologin_creater/api.py", line 394, in create
+    response = json.loads(
+  File "/usr/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.9/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.9/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
