@@ -30,7 +30,11 @@ def save_to_db(engine):
         session.commit()
 
 
-if __name__ == '__main__':
+def main():
     engine = create_engine(config.DATABASE)
     make_db(engine)
     save_to_db(engine)
+
+
+if __name__ == '__main__':
+    main()

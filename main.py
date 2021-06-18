@@ -17,12 +17,15 @@ from models import Proxy, Account
 import config
 
 
-def create_account(num, proxy, sites):
+def create_account(num, proxy, sites, suffix):
+    api = GoLogin({
+        'token': config.TOKEN
+    })
     try:
         options = {
-            "name": f"{date.today(): %d.%m.%Y}_{num}",
+            "name": f"{suffix}_{num}",
             "os": "win",
-            "proxy_mode": "socks5",
+            "proxy_mode": config.PROXY_MODE,
             "proxy_host": f"{proxy.ip.split(':')[0]}",
             "proxy_port": f"{proxy.ip.split(':')[1]}",
             "proxy_username": f"{proxy.login}",
@@ -44,13 +47,25 @@ def create_account(num, proxy, sites):
 
     try:
         crawler.links_opener(sites)
-    except Exception as e:
-        crawler.driver.quit()
+        api.update({
+            'notes': 'complite'
+        })
+    finally:
+        while True:
+            try:
+                crawler.driver.close()
+            except Exception:
+                break
         api.stop()
 
 
-
 def main():
+    global log
+    if len(sys.argv) != 4:
+        log.error("Number of arguments is not correct")
+        exit(2)
+    log = get_logger()
+    suffix = sys.argv[1]
     engine = sa.create_engine(config.DATABASE)
     session = Session(engine)
     f_sites = pathlib.Path("data/sites.txt")
@@ -59,10 +74,10 @@ def main():
     db_num = session.query(sa.func.max(Account.num)).where(Account.date == date.today()).first()[0]
     if not db_num:
         db_num = 0
-    nums = range(1, int(sys.argv[1]) + 1)
+    nums = range(int(sys.argv[3]), int(sys.argv[2]) + 1)
     with ProcessPoolExecutor(max_workers=config.WORKERS) as executor:
         for num, proxy in zip(nums, proxies):
-            executor.submit(create_account, num + db_num, proxy, sites)
+            executor.submit(create_account, num + db_num, proxy, sites, suffix)
             time.sleep(1)
 
 
@@ -88,8 +103,4 @@ def get_logger():
 
 
 if __name__ == '__main__':
-    api = GoLogin({
-        'token': config.TOKEN
-    })
-    log = get_logger()
     main()

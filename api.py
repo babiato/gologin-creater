@@ -11,7 +11,7 @@ import pathlib
 import tempfile
 import random
 
-API_URL = 'https://api.gologin.app'
+API_URL = 'https://api.gologin.com'
 
 
 class GoLogin(object):
@@ -143,23 +143,14 @@ class GoLogin(object):
                     continue
 
     def get_time_zone(self):
-        # proxy = self.proxy
-        # if proxy:
-        #     proxies = {proxy.get('mode'): f'{proxy["mode"]}://{proxy["host"]}:{proxy["port"]}'}
-        #     data = requests.get('https://time.gologin.app', proxies=proxies)
-        # else:
-        #     data = requests.get('https://time.gologin.app')
-        # return json.loads(data.content.decode('utf-8'))
-        return {  # TODO maybe fix
-            "ip": "207.154.198.134",
-            "timezone": "Europe/Berlin",
-            "accuracy": 100,
-            "ll": [
-                "50.11090",
-                "8.68213"
-            ],
-            "country": "DE"
-        }
+        proxy = self.proxy
+        if proxy:
+            proxies = {
+                "socks5": f'{proxy["mode"]}://{proxy["username"]}:{proxy["password"]}@{proxy["host"]}:{proxy["port"]}'}
+            data = requests.get('https://time.gologin.com', proxies=proxies)
+        else:
+            data = requests.get('https://time.gologin.com')
+        return json.loads(data.content.decode('utf-8'))
 
     def get_profile(self, profile_id=None):
         profile = self.profile_id if profile_id is None else profile_id

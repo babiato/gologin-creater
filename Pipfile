@@ -6,8 +6,10 @@ name = "pypi"
 [packages]
 selenium = "*"
 chromedriver-py = "==90.0.4430.24"
+sqlalchemy = "*"
+requests = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.8"
