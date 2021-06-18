@@ -7,7 +7,7 @@ import sqlalchemy as sa
 import pathlib
 
 from datetime import date
-from concurrent.futures import ProcessPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
 from sqlalchemy.orm import Session
 
 from automation import Crawler
@@ -17,7 +17,7 @@ from models import Proxy, Account
 import config
 
 
-def create_account(num, proxy, sites, suffix):
+def create_account(num, proxy, sites, suffix, session):
     api = GoLogin({
         'token': config.TOKEN
     })
@@ -47,6 +47,9 @@ def create_account(num, proxy, sites, suffix):
 
     try:
         crawler.links_opener(sites)
+        proxy.used = 1
+        session.add(proxy)
+        session.commit()
         api.update({
             'notes': 'complite'
         })
@@ -61,24 +64,25 @@ def create_account(num, proxy, sites, suffix):
 
 def main():
     global log
-    if len(sys.argv) != 4:
+    log = get_logger()
+    if len(sys.argv) != 3:
         log.error("Number of arguments is not correct")
         exit(2)
-    log = get_logger()
     suffix = sys.argv[1]
     engine = sa.create_engine(config.DATABASE)
     session = Session(engine)
     f_sites = pathlib.Path("data/sites.txt")
     sites = [site + "\n" for site in f_sites.read_text().split('\n')]
     proxies = session.query(Proxy).where(Proxy.used == 0).all()
-    db_num = session.query(sa.func.max(Account.num)).where(Account.date == date.today()).first()[0]
+    db_num = session.query(sa.func.max(Account.num)).where(Account.name == suffix).first()[0]
     if not db_num:
         db_num = 0
-    nums = range(int(sys.argv[3]), int(sys.argv[2]) + 1)
-    with ProcessPoolExecutor(max_workers=config.WORKERS) as executor:
+    nums = range(1, int(sys.argv[2]) + 1)
+    with ThreadPoolExecutor(max_workers=config.WORKERS) as executor:
         for num, proxy in zip(nums, proxies):
-            executor.submit(create_account, num + db_num, proxy, sites, suffix)
-            time.sleep(1)
+            # create_account(num + db_num, proxy, sites, suffix, session)
+            executor.submit(create_account, num + db_num, proxy, sites, suffix, session)
+            time.sleep(5)
 
 
 def get_logger():

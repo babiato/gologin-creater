@@ -19,4 +19,4 @@ class Account(Base):
     __tablename__ = 'account'
     id = sa.Column(sa.Integer, primary_key=True)
     num = sa.Column(sa.Integer, nullable=False)
-    date = sa.Column(sa.DateTime, nullable=False)
+    name = sa.Column(sa.String, nullable=False)
